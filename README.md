@@ -81,3 +81,40 @@ Successfully established the AWS environment, configured Amazon S3, and prepared
 ## Outcome
 
 Successfully developed a functional S3 Event Pipeline prototype using AWS services.
+
+## Week 3: Event Processing and Notifications
+
+### Day 15 - S3 Bucket Configuration
+
+- Verified S3 bucket configuration
+- Reviewed bucket permissions
+- Confirmed versioning settings
+- Verified event notifications
+- Tested bucket functionality
+
+### Day 16 - Lambda Event Processing
+
+- Created AWS Lambda function
+- Developed Python code for S3 event handling
+- Configured Lambda triggers
+- Tested Lambda execution
+- Deployed Lambda function
+
+### Day 17 - SNS Notification Integration
+
+- Created Amazon SNS topic
+- Configured email subscription
+- Tested SNS message delivery
+- Integrated SNS with Lambda function
+
+### Day 18 - Event Pipeline Integration
+
+- Integrated S3 bucket with Lambda
+- Configured event pipeline execution
+- Tested event processing workflow
+- Monitored pipeline using CloudWatch
+- Reviewed performance optimization
+
+## Week 3 Outcome
+
+Successfully implemented an event-driven architecture using Amazon S3, AWS Lambda, Amazon SNS, EventBridge, and CloudWatch.
