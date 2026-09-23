@@ -139,3 +139,24 @@ Successfully implemented an event-driven architecture using Amazon S3, AWS Lambd
 - Sent notifications through SNS
 - Audited events using CloudTrail
 - Improved reliability through testing and bug fixes
+
+## Week 6 - Performance, Scalability and Security Validation
+
+### Completed Tasks
+
+- Designed and implemented performance and scalability testing.
+- Tested pipeline under multiple upload and load conditions.
+- Verified pipeline reliability and scalability.
+- Implemented and validated CloudWatch monitoring.
+- Verified S3, DynamoDB and IAM security configurations.
+- Validated CloudTrail auditing and encryption settings.
+- Fixed Lambda event processing issues.
+- Optimized pipeline using event filtering and DynamoDB indexing.
+
+### Results
+
+- Successful Lambda execution
+- Successful DynamoDB updates
+- Successful SNS notifications
+- No data loss observed
+- No critical performance bottlenecks identified
