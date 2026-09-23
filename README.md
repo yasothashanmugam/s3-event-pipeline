@@ -118,3 +118,24 @@ Successfully developed a functional S3 Event Pipeline prototype using AWS servic
 ## Week 3 Outcome
 
 Successfully implemented an event-driven architecture using Amazon S3, AWS Lambda, Amazon SNS, EventBridge, and CloudWatch.
+
+
+## Week 4 
+
+### Completed Tasks
+
+- Integrated AWS CloudTrail for S3 event auditing
+- Verified IAM roles and permissions
+- Tested pipeline with multiple file scenarios (.txt, .jpg, .pdf)
+- Validated data consistency between S3 and DynamoDB
+- Fixed Lambda event format bug
+- Verified SNS notifications
+- Verified CloudWatch logging and monitoring
+
+### Results
+
+- Successfully processed S3 object events
+- Stored metadata in DynamoDB
+- Sent notifications through SNS
+- Audited events using CloudTrail
+- Improved reliability through testing and bug fixes
