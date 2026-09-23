@@ -1,162 +1,137 @@
-# s3-event-pipeline
+# AWS Serverless Data Processing Pipeline
 
-AWS S3 Event Pipeline using EventBridge, Lambda and CloudWatch
+## Problem Statement
 
-## Week 1: S3 Event Pipeline Setup
+Organizations often need to process files uploaded to cloud storage and perform actions such as metadata extraction, notifications, monitoring, and auditing. Manually handling these tasks can be time-consuming, error-prone, and difficult to scale. A serverless and event-driven solution is required to automatically process uploaded files, store metadata, send notifications, and provide monitoring and security controls while minimizing operational overhead.
 
-### Day 1 - Introduction to S3 Event Pipeline
-- Created and configured AWS account for the project
-- Installed AWS CLI on local machine
+## Solution
+
+This project implements an AWS Serverless Data Processing Pipeline using Amazon S3, AWS Lambda, DynamoDB, SNS, CloudWatch, CloudTrail, IAM, and EventBridge.
+
+Whenever a file is uploaded to an Amazon S3 bucket, an event is generated and triggers an AWS Lambda function. The Lambda function processes the uploaded file, extracts metadata, stores the metadata in a DynamoDB table, and sends notifications through Amazon SNS. CloudWatch is used for monitoring, logging, and alerting, while CloudTrail provides auditing and activity tracking. Security controls such as IAM roles, encryption, and access restrictions are implemented to ensure secure operation of the pipeline.
+
+The project also includes performance testing, scalability validation, reliability testing, error handling, monitoring, and security compliance verification.
+
+## Setup Steps
+
+### Week 1 - Environment Setup and Foundation
+
+#### Day 1
+- Created AWS account and configured project environment
+- Installed AWS CLI
 - Verified AWS CLI installation
-- Created IAM user with required permissions
+- Created IAM user and assigned permissions
 - Explored AWS Management Console services
 
-### Day 2 - S3 Bucket Creation
+#### Day 2
 - Created Amazon S3 bucket
 - Configured bucket settings
-- Enabled versioning
+- Enabled bucket versioning
 - Enabled server-side encryption
 - Tested file upload functionality
 
-### Day 3 - GitHub Repository Setup
-- Created GitHub repository for the project
-- Added README.md and .gitignore files
-- Initialized repository structure
+#### Day 3
+- Created GitHub repository
+- Added README and project structure
+- Configured Git and GitHub integration
 - Performed initial commit
-- Linked local project with GitHub repository
 
-### Day 4 - Environment Setup and Configuration
-- Configured AWS credentials and environment variables
-- Prepared local development environment
-- Set up project workspace
-- Created project documentation notes
-- Verified AWS connectivity through CLI commands
+#### Day 4
+- Configured AWS credentials
+- Set up development environment
+- Prepared project workspace
+- Verified AWS connectivity
 
-### Day 5 - Week 1 Review
-- Reviewed completed tasks
-- Verified AWS and GitHub configurations
-- Updated project documentation
-- Organized project files
+#### Day 5
+- Reviewed Week 1 activities
+- Verified configurations
+- Updated documentation
 - Completed Week 1 deliverables
 
-## Week 1 Outcome
+---
 
-Successfully established the AWS environment, configured Amazon S3, and prepared the GitHub repository for the S3 Event Pipeline project. This provided the foundation for implementing event-driven processing in subsequent weeks.
+### Week 2 - Event Pipeline Foundation
 
+#### Day 8
+- Configured S3 bucket notifications
+- Tested S3 event configuration
 
-
-## Week 2: S3 Event Pipeline Foundation
-
-### Day 8 - S3 Bucket Configuration
-- Created S3 bucket
-- Enabled versioning
-- Configured bucket notifications
-- Tested bucket setup
-
-### Day 9 - Lambda Function Development
+#### Day 9
 - Created AWS Lambda function
-- Developed Python code for event processing
+- Developed event processing logic
 - Tested Lambda execution
 
-### Day 10 - Event Pipeline Integration
+#### Day 10
 - Created CloudFormation stack
-- Integrated S3 event processing architecture
-- Tested pipeline components
+- Integrated S3 event pipeline
+- Tested event-driven workflow
 
-### Day 11 - Error Handling and Monitoring
-- Implemented try-except error handling
-- Configured CloudWatch logging
-- Viewed CloudWatch metrics
-- Created CloudWatch alarm
-- Tested monitoring setup
+#### Day 11
+- Implemented CloudWatch logging
+- Configured monitoring and alarms
+- Added Lambda error handling
 
-## Technologies Used
+---
 
-- Amazon S3
-- AWS Lambda
-- Amazon EventBridge
-- Amazon CloudWatch
-- AWS CloudFormation
+### Week 3 - Event Processing and Notifications
 
-## Outcome
+#### Day 15
+- Verified S3 configuration
+- Reviewed permissions and versioning
 
-Successfully developed a functional S3 Event Pipeline prototype using AWS services.
+#### Day 16
+- Configured Lambda event processing
+- Connected S3 and Lambda
+- Tested event handling
 
-## Week 3: Event Processing and Notifications
+#### Day 17
+- Created SNS topic and subscription
+- Integrated SNS notifications
 
-### Day 15 - S3 Bucket Configuration
+#### Day 18
+- Integrated complete pipeline
+- Verified event processing workflow
+- Monitored execution using CloudWatch
 
-- Verified S3 bucket configuration
-- Reviewed bucket permissions
-- Confirmed versioning settings
-- Verified event notifications
-- Tested bucket functionality
+---
 
-### Day 16 - Lambda Event Processing
+### Week 4 - Auditing and Validation
 
-- Created AWS Lambda function
-- Developed Python code for S3 event handling
-- Configured Lambda triggers
-- Tested Lambda execution
-- Deployed Lambda function
-
-### Day 17 - SNS Notification Integration
-
-- Created Amazon SNS topic
-- Configured email subscription
-- Tested SNS message delivery
-- Integrated SNS with Lambda function
-
-### Day 18 - Event Pipeline Integration
-
-- Integrated S3 bucket with Lambda
-- Configured event pipeline execution
-- Tested event processing workflow
-- Monitored pipeline using CloudWatch
-- Reviewed performance optimization
-
-## Week 3 Outcome
-
-Successfully implemented an event-driven architecture using Amazon S3, AWS Lambda, Amazon SNS, EventBridge, and CloudWatch.
-
-
-## Week 4 
-
-### Completed Tasks
-
-- Integrated AWS CloudTrail for S3 event auditing
+#### Completed Activities
+- Integrated CloudTrail auditing
 - Verified IAM roles and permissions
-- Tested pipeline with multiple file scenarios (.txt, .jpg, .pdf)
-- Validated data consistency between S3 and DynamoDB
-- Fixed Lambda event format bug
+- Tested different file scenarios
+- Validated DynamoDB consistency
+- Fixed Lambda event format issues
 - Verified SNS notifications
-- Verified CloudWatch logging and monitoring
+- Verified CloudWatch monitoring
 
-### Results
+---
 
-- Successfully processed S3 object events
-- Stored metadata in DynamoDB
-- Sent notifications through SNS
-- Audited events using CloudTrail
-- Improved reliability through testing and bug fixes
+### Week 5 - Advanced Event Processing
 
-## Week 6 - Performance, Scalability and Security Validation
+#### Completed Activities
+- Configured S3 event notifications
+- Implemented event filtering
+- Verified Lambda trigger execution
+- Tested S3 versioning functionality
+- Optimized event processing workflow
 
-### Completed Tasks
+---
 
-- Designed and implemented performance and scalability testing.
-- Tested pipeline under multiple upload and load conditions.
-- Verified pipeline reliability and scalability.
-- Implemented and validated CloudWatch monitoring.
-- Verified S3, DynamoDB and IAM security configurations.
-- Validated CloudTrail auditing and encryption settings.
-- Fixed Lambda event processing issues.
-- Optimized pipeline using event filtering and DynamoDB indexing.
+### Week 6 - Performance, Scalability and Security Validation
 
-### Results
+#### Completed Activities
+- Designed performance testing scenarios
+- Performed load and stress testing
+- Verified scalability and reliability
+- Implemented security validation
+- Verified encryption and IAM controls
+- Validated CloudTrail auditing
+- Optimized DynamoDB performance using GSI
+- Improved Lambda error handling
+- Verified CloudWatch monitoring and alerts
 
-- Successful Lambda execution
-- Successful DynamoDB updates
-- Successful SNS notifications
-- No data loss observed
-- No critical performance bottlenecks identified
+### Final Outcome
+
+The project successfully implements a serverless event-driven architecture using AWS services. Uploaded files are automatically processed through Lambda, metadata is stored in DynamoDB, notifications are delivered through SNS, and monitoring, auditing, security, scalability, and reliability requirements are validated using CloudWatch and CloudTrail.
